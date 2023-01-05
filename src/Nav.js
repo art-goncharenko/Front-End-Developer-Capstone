@@ -1,8 +1,11 @@
+import './Nav.css';
+import logo from "./Logo.svg";
 
 export const Nav = () => {
     return (
-        <nav>
-            <ul>
+        <nav className="navigation">
+            <img src={logo} alt="logo" className="logo"/>
+            <ul className="navLinks">
                 <li><a href={'#'}>Home</a></li>
                 <li><a href={'#'}>About</a></li>
                 <li><a href={'#'}>Menu</a></li>
