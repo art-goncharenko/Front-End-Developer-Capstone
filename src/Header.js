@@ -1,4 +1,3 @@
-import logo from './Logo.svg';
 import './Header.css';
 
 export const Header = () => {

@@ -1,3 +1,86 @@
-.mainDiv {
-    grid-area: main;
+.greenDiv {
+    background-color: #495E57;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 250px;
+    margin-bottom: 30px;
+}
+
+.heroDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 200px;
+}
+h1{
+    color: #F4CE14;
+    font-size: 32px;
+    font-weight: normal;
+    font-family: 'Markazi Text', serif;
+    margin: 15px 0;
+}
+h2{
+    color: white;
+    font-size: 16px;
+    margin: 0;
+    font-weight: normal;
+    font-family: 'Markazi Text', serif;
+}
+
+p {
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.reserveBtn {
+    background-color: #F4CE14;
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Markazi Text', serif;
+    border: none;
+    border-radius: 14px;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.heroImg {
+    position: relative;
+    top: 30px;
+    max-height: 300px;
+    max-width: 100%;
+    border-radius: 14px;
+}
+
+.specials {
+    display: flex;
+    margin: 40px 250px;
+    justify-content: space-between;
+}
+
+h3 {
+    color: black;
+    font-size: 32px;
+    margin: 0;
+}
+
+.onlineMenuBtn {
+    background-color: #F4CE14;
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Markazi Text', serif;
+    border: none;
+    border-radius: 14px;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.specialCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 250px;
 }

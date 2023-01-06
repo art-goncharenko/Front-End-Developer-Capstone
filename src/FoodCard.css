@@ -1,0 +1,18 @@
+.specialCard {
+    background-color: grey;
+    width: 260px;
+}
+
+h4 {
+    color: black;
+    margin: 10px 10px;
+}
+
+.titlePrice {
+    display: flex;
+    justify-content: space-between;
+}
+.price {
+    color: orange;
+    margin: 10px 10px;
+}
