@@ -1,0 +1,12 @@
+.btn {
+    background-color: #F4CE14;
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Markazi Text', serif;
+    border: none;
+    border-radius: 14px;
+    padding: 10px 20px;
+    margin: 0;
+    cursor: pointer;
+}

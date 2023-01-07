@@ -1,0 +1,30 @@
+.specials {
+    display: flex;
+    margin: 40px 250px;
+    justify-content: space-between;
+}
+
+h3 {
+    color: black;
+    font-size: 32px;
+    margin: 0;
+}
+
+.onlineMenuBtn {
+    background-color: #F4CE14;
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Markazi Text', serif;
+    border: none;
+    border-radius: 14px;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.specialCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 250px;
+}

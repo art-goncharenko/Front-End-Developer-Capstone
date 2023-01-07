@@ -1,10 +1,10 @@
 import './App.css';
-import {Header} from "./Header";
-import {Nav} from "./Nav";
+import {Header} from "./components/Header/Header";
+import {Nav} from "./components/Nav/Nav";
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
-import {Error404} from "./Error404";
-import {ReserveATable} from "./ReserveATable";
-import {Home} from "./Home";
+import {Error404} from "./components/Error404/Error404";
+import {BookingPage} from "./components/BookingPage/BookingPage";
+import {Home} from "./components/Home/Home";
 
 function App() {
     return (
@@ -14,7 +14,7 @@ function App() {
                     <Routes>
                         <Route path={"/"} element={<Navigate to="/Home"/>}/>
                         <Route path ="/Home" element={<Home/>}/>
-                        <Route path ="/ReserveATable" element={<ReserveATable/>}/>
+                        <Route path ="/BookingPage" element={<BookingPage/>}/>
                         <Route path ={'/*'} element={<Error404/>}/>
                     </Routes>
                 </BrowserRouter>

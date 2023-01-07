@@ -3,7 +3,7 @@ import './Footer.css';
 export const Footer = () => {
     return (
         <footer className="footerTag">
-            <img src="" alt="footer"/>
+            <img src="coursera/src/components/Footer/Footer" alt="footer"/>
             <nav className="footerNav">
                 <section className="footerDoormatNav">
                     <h3>Doormat navigation</h3>

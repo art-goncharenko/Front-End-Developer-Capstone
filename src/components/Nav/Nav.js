@@ -1,5 +1,5 @@
 import './Nav.css';
-import logo from "./Logo.svg";
+import logo from "../../img/Logo.svg";
 import {Link} from "react-router-dom";
 
 export const Nav = () => {
@@ -10,7 +10,7 @@ export const Nav = () => {
                     <li><Link to="/">Home</Link></li>
                     <li><a href={'#'}>About</a></li>
                     <li><a href={'#'}>Menu</a></li>
-                    <li><Link to="/ReserveATable">Reservations</Link></li>
+                    <li><Link to="/BookingPage">Reservations</Link></li>
                     <li><a href={'#'}>Order online</a></li>
                     <li><a href={'#'}>Login</a></li>
                 </ul>
