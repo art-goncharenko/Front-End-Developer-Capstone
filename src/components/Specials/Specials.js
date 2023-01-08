@@ -1,6 +1,7 @@
 import "./Specials.css";
 import {FoodCard} from "../FoodCard/FoodCard";
 import React from "react";
+import {specialsData} from "../../specialsData";
 
 export const Specials = () => {
     return (
@@ -13,9 +14,17 @@ export const Specials = () => {
             </section>
             <section>
                 <div className="specialCards">
-                    <FoodCard/>
-                    <FoodCard/>
-                    <FoodCard/>
+                    {specialsData.map((special) => {
+                        return (
+                            <FoodCard
+                                key={special.id}
+                                name={special.name}
+                                description={special.description}
+                                price={special.price}
+                                image={special.image}
+                            />
+                        )
+                    })}
                 </div>
             </section>
         </>

@@ -4,9 +4,9 @@ import {Specials} from "../Specials/Specials";
 
 export const Main = () => {
     return (
-        <>
-            <Hero />
-            <Specials />
-        </>
+            <main>
+                <Hero/>
+                <Specials/>
+            </main>
     );
 }

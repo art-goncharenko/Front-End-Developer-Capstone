@@ -14,3 +14,11 @@
     justify-content: space-between;
     gap: 30px;
 }
+@media (max-width: 915px) {
+    .navigation {
+        margin: 10px 10px;
+    }
+    .navLinks {
+        gap: 5px;
+    }
+}

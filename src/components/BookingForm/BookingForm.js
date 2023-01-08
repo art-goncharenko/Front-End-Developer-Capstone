@@ -1,7 +1,9 @@
 import "./BookingForm.css";
 import {useState} from "react";
+import {ACTION_TYPES} from "../../actionsData";
+import {submitAPI} from "../../api";
 
-export const BookingForm = ({availableTimes, setAvailableTimes}) => {
+export const BookingForm = ({availableTimes, setAvailableTimes, submitForm}) => {
     const formStyle = {
         display: "grid",
         maxWidth: "200px",
@@ -12,35 +14,37 @@ export const BookingForm = ({availableTimes, setAvailableTimes}) => {
     const [time, setTime] = useState("");
     const [guests, setGuests] = useState("");
     const [occasion, setOccasion] = useState("");
-    const [dateError, setDateError] = useState(false);
 
-    if (
-        new Date(date).getFullYear() < new Date().getFullYear() ||
-        new Date(date).getMonth() < new Date().getMonth() ||
-        new Date(date).getDate() < new Date().getDate() ||
-        !new Date(date)
-    ) {
-        setDateError(true)
+    const changeTimeSlots = (e) => {
+        setDate(e.target.value)
+        setAvailableTimes({
+            type: ACTION_TYPES.DATE_CHANGE,
+            payload: e.target.value,
+        })
     }
 
     return (
         <>
-            <form style={formStyle}>
+            <h1 className="reserveHeader">Reserve a table</h1>
+            <form onSubmit={submitForm}
+                  preventdefault="true"
+                  style={formStyle}>
                 <label htmlFor="date">Choose date</label>
                 <input required
                        name="date"
                        type="date"
                        value={date}
                        min={new Date().toISOString().split("T")[0]}
-                       onChange={(e) => setDate(e.target.value)}
+                       // onChange={(e) => setDate(e.target.value)}
+                    onChange={changeTimeSlots}
                        id="date"/>
                 <label htmlFor="time">Choose time</label>
                 <select required
                         name="time"
                         value={time}
                         onChange={(e) => setTime(e.target.value)}
-                        id="time ">
-                    {availableTimes.map((time, index) =>
+                        id="time">
+                    {availableTimes?.map((time, index) =>
                         <option key={index} value={time}>{time}</option>)}
                 </select>
                 <label htmlFor="guests">Number of guests</label>
@@ -62,7 +66,10 @@ export const BookingForm = ({availableTimes, setAvailableTimes}) => {
                     <option>Birthday</option>
                     <option>Anniversary</option>
                 </select>
-                <input type="submit" value="Make Your reservation" className="btn"/>
+                <input type="submit"
+                       aria-label="submit reserve table"
+                       value="Make Your reservation"
+                       className="btn"/>
             </form>
         </>
     )

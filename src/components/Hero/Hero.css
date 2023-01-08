@@ -10,7 +10,7 @@
 .heroDiv {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     max-width: 200px;
 }
 h1{
@@ -52,4 +52,9 @@ p {
     max-height: 300px;
     max-width: 100%;
     border-radius: 14px;
+}
+@media (max-width: 915px) {
+    .greenDiv {
+        padding: 0 5px;
+    }
 }

@@ -28,3 +28,13 @@ h3 {
     justify-content: space-between;
     margin: 0 250px;
 }
+
+@media (max-width: 915px) {
+    .specials {
+        margin: 0 10px;
+    }
+    .specialCards {
+        margin: 0 10px;
+        justify-content: center;
+    }
+}

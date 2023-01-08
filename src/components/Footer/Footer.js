@@ -1,38 +1,39 @@
 import './Footer.css';
+import {Link} from "react-router-dom";
 
 export const Footer = () => {
     return (
-        <footer className="footerTag">
-            <img src="coursera/src/components/Footer/Footer" alt="footer"/>
+        <footer>
             <nav className="footerNav">
-                <section className="footerDoormatNav">
-                    <h3>Doormat navigation</h3>
+                <div className="footerDoormatNav">
+                    <h3 className="footerTitle">Doormat navigation</h3>
                     <ul>
-                        <li><a href={'#'}>Home</a></li>
+                        <li><Link to="/">Home</Link></li>
                         <li><a href={'#'}>About</a></li>
                         <li><a href={'#'}>Menu</a></li>
-                        <li><a href={'#'}>Reservations</a></li>
+                        <li><Link to="/BookingPage">Reservations</Link></li>
                         <li><a href={'#'}>Order online</a></li>
                         <li><a href={'#'}>Login</a></li>
                     </ul>
-                </section>
-                <section className="footerContactNav">
-                    <h3>Contact</h3>
+                </div>
+                <div className="footerContactNav">
+                    <h3 className="footerTitle">Contact</h3>
                     <ul>
                         <li><a href={'#'}>Address</a></li>
                         <li><a href={'#'}>Phone number</a></li>
                         <li><a href={'#'}>Email</a></li>
                     </ul>
-                </section>
-                <section className="footerSocialNav">
-                    <h3>Social media links</h3>
+                </div>
+                <div className="footerSocialNav">
+                    <h3 className="footerTitle">Social media links</h3>
                     <ul>
                         <li><a href={'#'}>Address</a></li>
                         <li><a href={'#'}>Phone number</a></li>
                         <li><a href={'#'}>Email</a></li>
                     </ul>
-                </section>
+                </div>
             </nav>
+            <div className="footerBottom">Little Lemon 2023</div>
         </footer>
     );
 }

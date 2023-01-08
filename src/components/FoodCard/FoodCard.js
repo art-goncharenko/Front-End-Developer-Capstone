@@ -1,16 +1,16 @@
 import './FoodCard.css';
 
-export const FoodCard = () => {
+export const FoodCard = ({name, image, price, description}) => {
     return (
         <article>
             <div className="specialCard">
-                <img src="coursera/src/components/FoodCard/FoodCard" alt="special"/>
+                <img src={require(`../../img/${image}.jpg`)} alt={name}/>
                 <div className="titlePrice">
-                    <h4>Greek salad</h4>
-                    <p className="price">$ 12.99</p>
+                    <h4>{name}</h4>
+                    <span className="price">$ {price}</span>
                 </div>
-                <p> the famous greek salad bla bla</p>
-                <p>Order delivery</p>
+                <p>{description}</p>
+                <p className="delivery">Order delivery</p>
             </div>
         </article>
     );

@@ -1,0 +1,4 @@
+export const ACTION_TYPES = {
+    DATE_CHANGE: 'DATE_CHANGE',
+    ADD_BOOKING: 'ADD_BOOKING',
+}
