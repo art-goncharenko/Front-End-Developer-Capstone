@@ -67,7 +67,7 @@ export const BookingForm = ({availableTimes, setAvailableTimes, submitForm}) => 
                 <input type="submit"
                        name="submit"
                        role="button"
-                       aria-label="submit"
+                       aria-label="Submit your reservation"
                        value="Make Your reservation"
                        className="btn"/>
             </form>

@@ -74,7 +74,7 @@ describe("Verify both valid and invalid states for inputs", () => {
     })
 
     test('Submit button testing', () => {
-        const submitButton = screen.getByRole('button')
+        const submitButton = screen.getByRole('submit')
         expect(submitButton).toBeInTheDocument()
     })
 
