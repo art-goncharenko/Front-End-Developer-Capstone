@@ -65,7 +65,9 @@ export const BookingForm = ({availableTimes, setAvailableTimes, submitForm}) => 
                     <option>Anniversary</option>
                 </select>
                 <input type="submit"
-                       aria-label="submit reserve table"
+                       name="submit"
+                       role="button"
+                       aria-label="submit"
                        value="Make Your reservation"
                        className="btn"/>
             </form>
