@@ -11,7 +11,7 @@ export const Hero = () => {
                     <div className="heroDiv">
                         <h1>Little Lemon</h1>
                         <h2>Chicago</h2>
-                        <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a
+                        <p className="heroP">We are a family owned Mediterranean restaurant, focused on traditional recipes served with a
                             modern twist</p>
                         <button className="reserveBtn"><Link to="/BookingPage">Reserve a Table</Link></button>
                     </div>

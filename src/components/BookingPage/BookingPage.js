@@ -1,6 +1,6 @@
 import {BookingForm} from "../BookingForm/BookingForm";
 import "./BookingPage.css";
-import {useReducer} from "react";
+import { useReducer} from "react";
 import {fetchAPI, submitAPI} from "../../api";
 import { useNavigate} from "react-router-dom";
 import {ACTION_TYPES} from "../../actionsData";

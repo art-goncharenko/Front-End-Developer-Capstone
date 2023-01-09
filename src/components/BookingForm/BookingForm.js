@@ -1,14 +1,13 @@
 import "./BookingForm.css";
 import {useState} from "react";
 import {ACTION_TYPES} from "../../actionsData";
-import {submitAPI} from "../../api";
 
 export const BookingForm = ({availableTimes, setAvailableTimes, submitForm}) => {
     const formStyle = {
         display: "grid",
         maxWidth: "200px",
         gap: "20px",
-        marginLeft: "250px"
+        margin: "0 auto",
     }
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
@@ -27,9 +26,8 @@ export const BookingForm = ({availableTimes, setAvailableTimes, submitForm}) => 
         <>
             <h1 className="reserveHeader">Reserve a table</h1>
             <form onSubmit={submitForm}
-                  preventdefault="true"
                   style={formStyle}>
-                <label htmlFor="date">Choose date</label>
+                <label htmlFor="date">Choose date (required)</label>
                 <input required
                        name="date"
                        type="date"
@@ -38,7 +36,7 @@ export const BookingForm = ({availableTimes, setAvailableTimes, submitForm}) => 
                        // onChange={(e) => setDate(e.target.value)}
                     onChange={changeTimeSlots}
                        id="date"/>
-                <label htmlFor="time">Choose time</label>
+                <label htmlFor="time">Choose time (required)</label>
                 <select required
                         name="time"
                         value={time}
@@ -47,7 +45,7 @@ export const BookingForm = ({availableTimes, setAvailableTimes, submitForm}) => 
                     {availableTimes?.map((time, index) =>
                         <option key={index} value={time}>{time}</option>)}
                 </select>
-                <label htmlFor="guests">Number of guests</label>
+                <label htmlFor="guests">Number of guests (required)</label>
                 <input required
                        type="number"
                        name="guests"
@@ -57,7 +55,7 @@ export const BookingForm = ({availableTimes, setAvailableTimes, submitForm}) => 
                        min="1"
                        max="10"
                        id="guests"/>
-                <label htmlFor="occasion">Occasion</label>
+                <label htmlFor="occasion">Occasion (required)</label>
                 <select required
                         name="occasion"
                         value={occasion}
